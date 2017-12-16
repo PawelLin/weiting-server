@@ -6,7 +6,7 @@ const mongoose = require('mongoose')
 app.use(bodyParser.json())
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://127.0.0.1:27017/weiting')
+mongoose.connect('mongodb://127.0.0.1:27017/weiting', {useMongoClient: true})
 
 const css = require('./router/css')
 const menu = require('./router/menu')
